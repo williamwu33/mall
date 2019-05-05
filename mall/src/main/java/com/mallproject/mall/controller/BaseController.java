@@ -15,6 +15,9 @@ import com.mallproject.mall.error.EmBusinessError;
 import com.mallproject.mall.response.CommonReturnType;
 
 public class BaseController {
+	
+	public static final String CONTENT_TYPE_FORMED="application/x-www-form-urlencoded";
+	
 	// 定义一个handlerExccption解决未被cotroller层吸收的exception
 		@ExceptionHandler(Exception.class)
 		@ResponseStatus(HttpStatus.OK)
