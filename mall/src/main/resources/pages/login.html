@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>用户登录</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="body">
+  <!-- <h1>你好，世界！</h1> -->
+  <div class="form-group" id="form-group">
+    <br>
+    <h3 class="text-center"><strong>欢迎登录</strong></h3>
+    <form action="" id="form" method="GET">
+      <span class="glyphicon glyphicon-user"></span>
+      <label> 账号或者Email:</label>
+      <input type="text" class="form-control" placeholder="请输入账号或者Email" name="user_name" onblur="userNameEx();" id="user_name">
+      <span class="glyphicon glyphicon-lock"></span>
+      <label>密码:</label>
+      <input type="password" class="form-control" name="user_passwords" id="user_passwords" onblur="userPasswordEx();">
+      <span id="getPassword"><a href="">忘记密码?</a></span><br>
+      <span class="glyphicon glyphicon-envelope"></span>
+      <label>验证码:&nbsp;</label><input type="text" class="form-control" name="user_code" id="user_code"
+        onblur="randEx();">
+      <div id="user_code_span">
+        <div id="str" onclick="rand();">Hop589</div>
+      </div><br>
+      <!-- <input type="reset" class="btn btn-info" id="reset" value="取消"> -->
+      <input type="submit" class="btn btn-warning" value="登录" id="submit">
+      <span id="getPassword"><a href="./logup.html">没有账号?去注册</a></span><br>
+    </form>
+    <!-- 存放图标判断输入的输入值得合理性 -->
+    <div id="glyphicon">
+      <div id="name">
+        <span class="glyphicon glyphicon-ok" id="name_true"></span>
+        <span class="glyphicon glyphicon-remove" id="name_false"></span>
+      </div>
+      <div id="password">
+        <span class="glyphicon glyphicon-ok" id="password_true"></span>
+        <span class="glyphicon glyphicon-remove" id="password_false"></span>
+      </div>
+      <div id="code"> 
+        <span class="glyphicon glyphicon-ok" id="code_true"></span>
+        <span class="glyphicon glyphicon-remove" id="code_false"></span>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/login.js">
+  </script>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

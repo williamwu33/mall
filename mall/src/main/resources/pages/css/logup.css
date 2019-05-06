@@ -1,0 +1,52 @@
+#body{
+    color: #277370;
+    background-color: rgb(136, 136, 81);
+}
+#form-group{
+    width: 357px;
+    height: 450px;
+    /* border: 0.1rem blue solid; */
+    border-radius: 20px;
+    background-color: #cccccc;
+    margin: 75px auto;
+}
+
+#form{
+    width: 200px;
+    height: 300px;
+    background-color: #cccccc;
+    /* border: 0.1rem red solid; */
+    margin: 0 auto;
+}
+form label{
+    font-style: unset;
+    line-height: 27px;
+   position: relative;
+   left: 2px;
+}
+#reset,#submit{
+    width: 100%;
+   margin: 13px auto;
+   display: inline-block;
+}
+#getPassword{
+    width: 100px;
+    margin: 0 0 0 0;
+    font-size: 12px;
+    position: relative;
+    right: 0%;
+}
+#user_code{
+    width:  128px;
+    display: inline-block;
+}
+#user_code_span{
+    width: 60px;
+    height: 34px;
+    border: 1px solid blue;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    left: 6px;
+    top: 12px;
+}
