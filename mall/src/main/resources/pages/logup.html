@@ -34,11 +34,11 @@
       <input type="text" class="form-control" placeholder="请输入手机号或者Email" name="user_name" id="user_name">
       <span class="glyphicon glyphicon-lock"></span>
       <label>密码:</label>
-      <input type="password" class="form-control" name="user_passwords">
+      <input type="password" class="form-control" name="user_passwords" id="user_passwords">
       <span class="glyphicon glyphicon-lock"></span>
       <label>确认密码:</label>
-      <input type="password" class="form-control" name="user_passwords_confor">
-      <span id="getPassword"><a href="">发送验证码</a></span><br>
+      <input type="password" class="form-control" name="user_passwords_confor" id="user_passwords_confor">
+      <span id="getotp"><a href="">发送验证码</a></span><br>
       <span class="glyphicon glyphicon-envelope"></span>
       <label>验证码:&nbsp;</label><input type="text" class="form-control" name="user_code" id="user_code">
       <input type="submit" class="btn btn-success" value="确认注册" id="submit"><br>
@@ -50,9 +50,10 @@
   
 </body>
 <script>
+
 jQuery(document).ready(function(){
 // 绑定otp的click实现用于向后端发送获取手机验证码的请求
-$("#submit").on("click",function(){
+$("#getotp").on("click",function(){
     var telphone = $("#user_name").val();
     if(telphone == null || telphone ==""){
         alert("手机号不能为空");
@@ -82,6 +83,20 @@ $("#submit").on("click",function(){
     });
     return false;
 });
+
+// 
+$("#submit").on("click",function(){
+  var user_passwords = $("#user_name").val();
+  if(user_passwords == null || user_passwords ==""){
+      alert("密码不能为空"); 
+        return false;
+  }
+  var user_passwords_confor = $("#user_passwords_confor").val();
+
+  return false;
+});
+
+
 });
 
 
